@@ -10,10 +10,10 @@ import javax.lang.model.element.NestingKind;
  */
 public class Solution43 {
     public static void main(String[] args) {
-        String a = "20";
-        String s = "3";
-//        System.out.println(getSingleMul(a,s));
-//        System.out.println(getStringAdd(a,s,3));
+        String a = "123";
+        String s = "456";
+//        System.out.println(getSingleMul(s,a));
+//        System.out.println(getStringAdd(a,s,0));
         System.out.println(multiply(a,s));
         //49262238
         //System.out.println(getSingleMul(a,s));
@@ -32,7 +32,7 @@ public class Solution43 {
         }
         String str = "";
         for(int i = num2.length() - 1 , j = 0; i >= 0; i --, j++){
-            str = getStringAdd(str,getSingleMul(String.valueOf(num2.charAt(i)),num1),str.length() - i - 1);
+            str = getStringAdd(str,getSingleMul(String.valueOf(num2.charAt(i)),num1),str.length() - j );
         }
         return str;
     }
